@@ -1,0 +1,9 @@
+on:
+  pull_request:
+  merge_group:
+
+jobs:
+  foo:
+    steps:
+      - run: echo hello
+
