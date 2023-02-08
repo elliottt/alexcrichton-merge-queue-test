@@ -1,9 +1,11 @@
+name: CI
 on:
   pull_request:
   merge_group:
 
 jobs:
   foo:
+    runs-on: ubuntu-latest
     steps:
       - run: echo hello
 
