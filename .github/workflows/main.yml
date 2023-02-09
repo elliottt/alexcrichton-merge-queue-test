@@ -1,11 +1,13 @@
 name: CI
+
 on:
   pull_request:
   merge_group:
+  push:
 
 jobs:
   foo:
     runs-on: ubuntu-latest
     steps:
-      - run: echo hello2
+      - run: echo hello3
 
