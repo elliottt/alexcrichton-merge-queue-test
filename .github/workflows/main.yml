@@ -2,8 +2,9 @@ name: CI
 
 on:
   pull_request:
-  merge_group:
+    branches: [main]
   push:
+    branches: ['gh-readonly-queue/main/*']
 
 jobs:
   foo:
