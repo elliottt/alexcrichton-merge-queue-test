@@ -7,8 +7,13 @@ on:
     branches: ['gh-readonly-queue/main/*']
 
 jobs:
-  foo:
+  fast:
     runs-on: ubuntu-latest
     steps:
-      - run: echo hello3
+      - run: echo hello
+  slow:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - run: sleep 60
 
